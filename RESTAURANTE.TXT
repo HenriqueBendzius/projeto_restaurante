@@ -62,7 +62,7 @@ namespace web_api_restaurante.Controllers
         {
             using IDbConnection dbConnection = OpenConnection();
             string query = @"INSERT into produto(nome, descricao, imageUrl)
-                            VALUES(@Nome , @Descricao , @ImageUrl);  ";
+                            VALUES(@Nome , @Descricao , @ImagemUrl);  ";
 
             await dbConnection.ExecuteAsync(query, produto);
             dbConnection.Close();
